@@ -18,3 +18,4 @@ print('Total de sapos: %d' %sapo)
 print('Percentual de coelhos: %.2f' %float(((100 * coelho)/qntd)),'%')
 print('Percentual de ratos: %.2f' %float(((100 * rato)/qntd)),'%')
 print('Percentual de sapos: %.2f' %float(((100 * sapo)/qntd)),'%')
+#teste git
