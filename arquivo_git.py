@@ -1,0 +1,20 @@
+num = int(input())
+qntd, rato, sapo, coelho = 0,0,0,0
+for i in range(num):
+    Quantia, Tipo = input().split()
+    str(Tipo)
+    qntd += int(Quantia)
+    if Tipo == 'C':
+        coelho += int(Quantia)
+    elif Tipo == 'R':
+        rato += int(Quantia)
+    elif Tipo == 'S':
+        sapo += int(Quantia)
+
+print('Total: %d cobaias' % qntd)
+print('Total de coelhos: %d' %coelho)
+print('Total de ratos: %d' %rato)
+print('Total de sapos: %d' %sapo)
+print('Percentual de coelhos: %.2f' %float(((100 * coelho)/qntd)),'%')
+print('Percentual de ratos: %.2f' %float(((100 * rato)/qntd)),'%')
+print('Percentual de sapos: %.2f' %float(((100 * sapo)/qntd)),'%')
