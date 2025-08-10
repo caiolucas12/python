@@ -1,0 +1,50 @@
+#veerificar se tem 8 caracteres
+def tem_oito_caracteres(senha: str) -> bool:
+    return len(senha) >= 8
+
+#verificar se tem uma letra maiuscula
+def letra_maiuscula(senha: str) -> bool:
+    for caractere in senha:
+        if caractere >= 'A' and caractere <= 'Z':
+            return True    
+    return False
+
+#verificar duas letras minúsculas
+def letra_minuscula(senha: str) -> bool:
+    cont = 0
+    for caractere in senha:
+        if caractere >= 'a' and caractere <= 'z':
+            cont += 1
+    if cont >= 2:
+        return True
+    return False
+
+#verificar se contem pelo menos um numero
+def numero(senha: str) -> bool:
+    for caractere in senha:
+        if caractere >= '0' and caractere <= '9':
+            return True
+    return False
+
+#verificar pelo menos dois caracteres especiais
+def caracteres_especiais(senha: str) -> bool:
+    cont = 0
+    for caractere in senha:
+        codigo = ord(caractere)
+        if not ((codigo >= 65 and codigo <= 90) or (codigo >= 97 and codigo <= 122) or (codigo >= 48 and codigo <= 57)):
+            cont += 1
+    return cont >= 2
+
+#main
+senha = input('Digite sua senha: ')
+
+tamanho_certo = tem_oito_caracteres(senha)
+maiuscula_certo = letra_maiuscula(senha)
+minuscula_certo = letra_minuscula(senha)
+numero_certo = numero(senha)
+tem_caracteres = caracteres_especiais(senha)
+
+if tamanho_certo and maiuscula_certo and minuscula_certo and numero_certo and tem_caracteres:
+    print('Senha Válida!')
+else:
+    print('Senha Invalida!')

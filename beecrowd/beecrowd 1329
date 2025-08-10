@@ -1,0 +1,17 @@
+while True:
+    quantidade = int(input())
+    if quantidade == 0:
+        break
+
+    tentativa = list(map(int, input().split()))
+
+    vitorias = {
+    0: 0,
+    1: 0
+    }
+
+    for i in tentativa:
+        if i in vitorias:
+            vitorias[i] += 1
+
+    print('Mary won', vitorias[1], 'times and John won', vitorias[0], 'times')

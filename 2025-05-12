@@ -1,0 +1,44 @@
+def somar(num1: int, num2: int) -> int:
+    soma = num1 + num2
+    return soma
+'''Faz a soma entre os números'''
+def dividir (num1: float, num2: float) -> float:
+    divisao = num1 / num2 
+    return divisao
+'''Faz a divisão entre os números'''
+def multiplicar(num1: int, num2: int) -> int:
+    multiplicacao = num1 * num2
+    return multiplicacao
+'''Faz a multiplicação entre os números'''
+def subtrair(num1: int, num2: int) -> int:
+    subtracao = num1 - num2  
+    return subtracao
+'''Faz a subtração entre os números'''
+def exibir(num1: str, num2: str) -> str:
+    print(f'Primeiro numero: {num1}')
+    print(f'Segundo numero: {num2}')
+    '''Exibe dois numeros obtidos'''
+def mensagem_pt():
+    return 'Ola, bem-vindo ao programa de operações matemáticas!'
+'''Exibe a mensagem de boas vindas em português'''
+def mensagem_en():
+    return 'Hello, welcome to the math operations program!'
+'''Exibe a mensagem de boas vindas em inglês'''
+
+def boas_vindas():
+    msg = mensagem_pt()
+    print(msg)
+'''Exibe a mensagem na lingua escolhida'''
+    
+    
+## teste
+
+n1, n2 = 10, 20 
+
+
+boas_vindas()
+exibir(n1, n2)
+print(f'{somar(n1, n2) = }')
+print(f'{subtrair(n1, n2) = }')
+print(f'{multiplicar(n1, n2) = }')
+print(f'{dividir(n1, n2) = }')

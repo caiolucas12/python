@@ -1,0 +1,69 @@
+def quadrado(lado: float) -> float:
+    area1 = lado ** 2
+    return area1 
+'''Calcula a área do quadrado'''
+def retangulo(base: float, altura: float) -> float:
+    area2 = base * altura
+    return area2 
+'''Calcula a área do retangulo'''
+def triangulo(base: float, altura: float) -> float:
+    area3 = (base * altura)/2
+    return area3
+'''Calcula a área do triangulo'''
+def trapezio(base_menor: float, base_maior: float , altura: float) -> float:
+    area4 = ((base_maior + base_menor) * altura)/2
+    return area4
+'''Calcula a área do trapezio''' 
+def paralelogramo(base: float, altura: float) -> float:
+    area5 = base * altura
+    return area5
+'''Calcula a área do paralelogramo'''
+def losango(diagonal_maior: float, diagonal_menor: float) -> float:
+    area6 = (diagonal_maior * diagonal_menor)/2
+    return area6
+'''Calcula a área do losango'''
+def circulo(raio: float) -> float:
+    area7 = (raio ** 2) * 3.14159
+    return area7 
+'''Calcula a área do circulo'''
+
+## main
+
+tipo = input('Informe a figura geométrica: ')
+
+if tipo == 'quadrado':
+    lado_quadrado = int(input('Informe o lado do quadrado: '))
+    areaq = quadrado(lado_quadrado) 
+    print('Área do quadrado: ',areaq)
+elif tipo == 'retangulo':
+    base_retangulo = int(input('Informe a base do retangulo: '))
+    altura_retangulo = int(input('Informe a altura do retangulo: '))
+    arear = retangulo(base_retangulo, altura_retangulo)
+    print('Área do retângulo: ',arear)
+elif tipo == 'triangulo':
+    base_t = int(input('Informe a base do triangulo: '))
+    altura_t = int(input('Informe a altura do triangulo: '))
+    area_t = triangulo(base_t, altura_t)
+    print('Área do triangulo: ', area_t)
+elif tipo == 'trapezio':
+    basema_trapezio = int(input('Informe a base maior do trapezio: '))
+    baseme_trapezio = int(input('Informe a base menor do trapezio: '))
+    altura_trapezio = int(input('Informe a altura do trapezio: '))
+    area_trapezio = trapezio(basema_trapezio, baseme_trapezio, altura_trapezio)
+    print('Área do trapezio: ',area_trapezio)
+elif tipo == 'paralelogramo':
+    base_paralelogramo = int(input('Informe a base do paralelogramo: '))
+    altura_paralelogramo = int(input('Informe a altura do paralelogramo: '))
+    area_paralelogramo = paralelogramo(base_paralelogramo, altura_paralelogramo)
+    print('Área do paralelogramo: ', area_paralelogramo)
+elif tipo == 'losango':
+    diagonalma_losango = int(input('Informe a diagonal maior: '))
+    diagonalme_losango = int(input('Informe a diagonal menor: '))
+    area_losango = losango(diagonalma_losango, diagonalme_losango)
+    print('Área do losango: ', area_losango)
+elif tipo == 'circulo':
+    raio_circulo = int(input('Informe o raio: '))
+    area_circulo = circulo(raio_circulo)
+    print('Área do circulo: ',area_circulo)
+else:
+    print('Figura geométrica invalida')

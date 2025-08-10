@@ -1,0 +1,17 @@
+combustiveis = {
+    1: 0,
+    2: 0,
+    3: 0
+}
+
+codigo = int(input())
+while codigo != 4:
+    codigo = int(input())
+    if codigo in combustiveis:
+        combustiveis[codigo] += 1
+
+print('MUITO OBRIGADO')
+print(f'Alcool: {combustiveis[1]}')
+print(f'Gasolina: {combustiveis[2]}')
+print(f'Diesel: {combustiveis[3]}')
+

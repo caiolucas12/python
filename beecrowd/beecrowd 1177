@@ -1,0 +1,12 @@
+T = int(input())
+vetor = [0] * 1000
+valor = 0
+
+for i in range(1000):
+    vetor[i] = valor
+    valor += 1
+    if valor == T:
+        valor = 0
+
+for i in range(1000):
+    print(f'N[{i}] = {vetor[i]}')
