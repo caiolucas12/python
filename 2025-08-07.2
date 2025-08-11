@@ -1,0 +1,11 @@
+texto = input()
+texto_maiusculo = ''
+
+for caractere in texto:
+    if caractere >= 'a' and caractere <= 'z':
+        maiuscula = chr(ord(caractere) - 32 )
+        texto_maiusculo = texto_maiusculo + maiuscula
+    else:
+        texto_maiusculo += caractere
+
+print(texto_maiusculo)
