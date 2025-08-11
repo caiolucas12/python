@@ -3,15 +3,15 @@ texto = input()
 minusculas = 0
 maiusculas = 0
 numeros = 0
-caracteres_esp = 0
+especiais = 0
 total = 0
 
 for caracter in texto:
-    if caracter >= 'a' and caracter <= 'z':
+    if caracter.islower():
         minusculas += 1 
-    elif caracter >= 'A' and caracter <= 'Z':
+    elif caracter.isupper():
         maiusculas +=1 
-    elif  caracter >= '0' and caracter <= '9':
+    elif  caracter.isdigit():
         numeros += 1
     else:
         especiais += 1
