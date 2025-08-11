@@ -1,0 +1,23 @@
+texto = input()
+
+minusculas = 0
+maiusculas = 0
+numeros = 0
+caracteres_esp = 0
+total = 0
+
+for caracter in texto:
+    if caracter >= 'a' and caracter <= 'z':
+        minusculas += 1 
+    elif caracter >= 'A' and caracter <= 'Z':
+        maiusculas +=1 
+    elif  caracter >= '0' and caracter <= '9':
+        numeros += 1
+    else:
+        especiais += 1
+    
+print('Minúsculas: ', minusculas)
+print("Maiúsculas:", maiusculas)
+print("Números:", numeros)
+print("Especiais:", especiais)
+print("Total:", len(texto))
