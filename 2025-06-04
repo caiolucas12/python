@@ -7,5 +7,6 @@ while True:
         break
     nomes.append(nome)
 
-for nome in nomes:
+for nome, indice in enumerate(nomes):
+    print(indice)
     print(nome)
