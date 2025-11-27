@@ -1,0 +1,50 @@
+class No:
+    def __init__(self, carga = 0, anterior = None):
+        self.carga = carga
+        self.anterior = anterior
+    def __repr__(self):
+        return '%s -> %s' % (self.carga, self.anterior)
+    
+class Pilha:
+    def __init__(self):
+        self.topo = None
+    
+    def is_empty(self):
+        return self.topo is None
+    
+    def push(self, elemento):
+        no = No(elemento)
+        no.anterior = self.topo
+        self.topo = no
+
+    def pop(self):
+        if self.is_empty():
+            print('A pilha ta vazia')
+            return
+        self.topo = self.topo.anterior
+    
+    def __str__(self):
+        return '['+ str(self.topo) + ']'
+
+    def remover_ate_elemento(self, elemento_alvo):
+        atual = self.topo
+        while atual is not None:
+            if atual.carga == elemento_alvo:
+                self.topo = atual.anterior
+                print('elemento encontrado')
+                return
+            atual = atual.anterior
+        self.topo = None
+        print('pilha esvaziada')
+
+#main
+pilha = Pilha()
+pilha.push(44)
+pilha.push(65)
+pilha.push(32)
+pilha.push(54)
+
+print(pilha)
+print('--remoção--')
+pilha.remover_ate_elemento(32)
+print(pilha)
